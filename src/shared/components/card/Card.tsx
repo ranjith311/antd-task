@@ -6,11 +6,11 @@ interface ITaskCard {
     content?: string,
     styles?: any,
     className?: string
-    loading?:boolean
+    loading?: boolean
 }
 
 const TaskCard = (props: ITaskCard) => {
-    const { title, content, styles, className,loading } = props
+    const { title, content, styles, className, loading } = props
 
     return (
         <>
@@ -21,7 +21,10 @@ const TaskCard = (props: ITaskCard) => {
                     loading={loading}
                     title={title}
                     className={className}>
-                    <p>{content}</p>
+                    <div style={{ display: "flex", justifyContent: "between", alignItems: "baseline" }}>
+                        <p>{content}</p>
+                        <span>{"Tasks"}</span>
+                    </div>
                 </Card>
             </div>
 
