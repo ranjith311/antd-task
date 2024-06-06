@@ -51,7 +51,7 @@ const AppLayout: React.FC = () => {
             >
                 <div className="demo-logo-vertical" />
                 <Menu className='sider-bg' theme="light" mode="inline" defaultSelectedKeys={[getDefaultKeySider(items, location.pathname).toString()]} >
-                    <div className='sider-spacing'><Menu.Item disabled style={{ padding: "0 5px" }}><Link to={PATH_DASHBOARD}><img src={logo1} alt='logo' width={180} /></Link> </Menu.Item> </div>
+                    <div className='sider-spacing'><Menu.Item disabled style={{ padding: "0 5px" }}><img src={logo1} alt='logo' width={180} /></Menu.Item> </div>
                     {items.map((item) => (
                         <Menu.Item key={item.key} icon={item.icon} onClick={() => { isMobile && setCollapsed(!collapsed) }}>
                             <Link to={item.path}>{item.label}</Link>
